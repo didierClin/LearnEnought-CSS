@@ -98,6 +98,7 @@ a {
 .full-hero {
   background-color: #c7dbfc;
   height: 50vh;
+  padding: 100px;
 }
 
 .full-hero:hover {
