@@ -1,3 +1,24 @@
 ---
 layout: default
 ---
+
+I'm a flexbox container
+pour l'instant je ne m'étends pas
+<div class="gallery col-three">
+  <div class="col col-nav">
+    I'm the nav:
+    flex grow 0 shrink 1 basis 15em
+    <p>flexbasis a 15 je conserve ma taille autant que possible!!</p>
+  </div>
+  <div class="col col-content">
+    I'm the 3 col page:
+    flex grow 1 shrink 1 basis 0
+    <p>flexgrow a 1 je m'etends!!</p>
+  </div>
+  <div class="col col-aside">
+    I'm the Right col:
+    flex grow 0 shrink 1 basis 15em
+    <p>flexbasis a 20em je conserve ma taille autant que possible!!</p>
+    <p>puisque flex-shrink est à 1 pour tous</p>
+  </div>
+</div>
