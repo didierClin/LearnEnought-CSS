@@ -7,13 +7,14 @@
   <link rel="stylesheet" href="/css/main.css">
 </head>
 
+  <!-- flexbox container -->
   <body>
     <header class="header">
   <nav class="">
     <ul class="header-nav nav-links">
       <li><a href="/">Home</a></li>
 <li><a href="/gallery">Gallery</a></li>
-<li><a href="#">Nav 2</a></li>
+<li><a href="/blog">blog</a></li>
 <li><a href="#">Nav 3</a></li>
 
     </ul>
@@ -26,10 +27,42 @@
 </header>
 
 
+    <!-- 2nd flexbox item, the only one that will be changing in size -->
     <div class="content-container">
-      
+      <div class="gallery col-three">
+  <div class="col col-nav gallery-thumbs" id="gallery-thumbs">
+    <div class="current">
+      <img src="/images/small/slide1.jpg" alt="Image Title 1">
+    </div>
+    <div class="">
+      <img src="/images/small/escargot.jpg" alt="Image Title 1">
+    </div>
+    <!-- I'm the nav:
+    flex grow 0 shrink 1 basis 15em
+    <p>flexbasis a 15 je conserve ma taille autant que possible!!</p> -->
+  </div>
+  <div class="col col-content">
+    <div class="gallery-photo" id="gallery-photo">
+      <img src="/images/large/slide1.jpg" alt="Image Title 1">
+    </div>
+    <!-- I'm the 3 col page:
+    flex grow 1 shrink 1 basis 0
+    <p>flexgrow a 1 je m'etends!!</p>
+    <p>En passant le display a flex pour le content-container (parent du container gallery), on résoud le pb du shrink vertical</p> -->
+  </div>
+  <div class="col col-aside gallery-info" id="gallery-info">
+    <h3>Image Title </h3>
+    <p>Image description</p>
+    <!-- I'm the Right col:
+    flex grow 0 shrink 1 basis 15em
+    <p>flexbasis a 20em je conserve ma taille autant que possible!!</p>
+    <p>puisque flex-shrink est à 1 pour tous</p> -->
+  </div>
+</div>
+
     </div>
 
+    <!-- 3rd potential flexbox item, but not given a flex: property -->
         <footer class="footer">
        <a href="/">
          <img src="/images/logo.png" alt="Learn Enough">
@@ -38,7 +71,7 @@
          <ul class="footer-nav nav-links">
            <li><a href="/">Home</a></li>
 <li><a href="/gallery">Gallery</a></li>
-<li><a href="#">Nav 2</a></li>
+<li><a href="/blog">blog</a></li>
 <li><a href="#">Nav 3</a></li>
 
          </ul>
